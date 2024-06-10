@@ -1,0 +1,56 @@
+{
+  "produto": [
+  ],
+  "produto_marca": [
+    {
+      "id": 1,
+      "nome": "Ford",
+      "descricao": "Marca daora, muito popular."
+    }
+  ],
+  "produto_unidade": [
+    {
+      "id": 1,
+      "sigla": "CAR",
+      "descricao": "Carro novo, Ano 2010."
+    }
+  ],
+  "produto_subgrupo": [
+    {
+      "id": 1,
+      "id_produto_grupo": 1,
+      "nome": "sedan",
+      "descricao": "Compartimento de carga traseiro separado."
+    },
+    {
+      "id": 2,
+      "id_produto_grupo": 1,
+      "nome": "hatch",
+      "descricao": "Caracterizados por sua carroceria compacta com uma área de carga traseira integrada."
+    },
+    {
+      "id": 3,
+      "id_produto_grupo": 1,
+      "nome": "SUV",
+      "descricao": "Veículos esposrtivos com capacidade off-road."
+    },
+    {
+      "id": 4,
+      "id_produto_grupo": 1,
+      "nome": "van",
+      "descricao": "Vículos utilitários projetados para transportar cargas ou passageiros em grandes quantidades"
+    }
+  ],
+  "produto_grupo": [
+    {
+      "id": 1,
+      "nome": "2 portas",
+      "descricao": "Duas portas laterais, uma para o motorista e outra para o passageiro dianteiro."
+    },
+    {
+      "id": 2,
+      "nome": "4 portas",
+      "descricao": "Duas portas adicionais na parte traseira."
+    }
+  ]
+}
