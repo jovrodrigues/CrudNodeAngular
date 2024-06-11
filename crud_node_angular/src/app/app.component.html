@@ -1,61 +1,100 @@
 <main>
   <section id="tabela">
-    <table id="produto" class="flex-column">
-      <th>
-        <ul class="flex-row">
-          <li>ID Produto</li>
-          <li>Subgrupo</li>
-          <li>Marca</li>
-          <li>Unidade</li>
-          <li>Nome</li>
-          <li>gtIn ???</li>
-          <li>Valor</li>
-          <li>Data Cadastro</li>
-        </ul>
-      </th>
-      <ul class="flex-row" *ngFor="let item of itens">
-        <li>ID produto</li>
-        <li>
-          <table class="produto-subgrupo">
-            <ul class="flex-column">
-              <li>ID produto_subgrupo</li>
-              <li>
-                <table class="produto-grupo">
-                  <ul class="flex-column">
-                    <li>ID produto_grupo</li>
-                    <li>Nome</li>
-                    <li>Descrição</li>
-                  </ul>
-                </table>
-              </li>
-              <li>Nome</li>
-              <li>Descrição</li>
-            </ul>
-          </table>
-        </li>
-        <li>
-          <table class="produto-marca">
-            <ul class="flex-column">
-              <li>ID Marca</li>
-              <li>Nome</li>
-              <li>Descrição</li>
-            </ul>
-          </table>
-        </li>
-        <li>
-          <table class="produto_unidade">
-            <ul class="flex-column">
-              <li>ID produto_unidade</li>
-              <li>Sigla</li>
-              <li>Descrição</li>
-            </ul>
-          </table>
-        </li>
-        <li>Nome</li>
-        <li>gtIn</li>
-        <li>Valor</li>
-        <li>Data Cadastro</li>
-      </ul>
+    <table id="produto" class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID Produto</th>
+          <th scope="col">Subgrupo</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Unidade</th>
+          <th scope="col">Nome</th>
+          <th scope="col">gtin</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Data Cadastro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dado of dados">
+          <td>{{dado.produto_id}}</td>
+          <td class="sub-tabela">
+            <table class="produto-subgrupo table">
+              <thead>
+                <tr>
+                  <th scope="col">ID Subgrupo</th>
+                  <th scope="col">Grupo</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Descrição</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{dado.subgrupo_id}}</td>
+                  <td class="sub-tabela">
+                    <table class="produto-grupo table">
+                      <thead>
+                        <tr>
+                          <th scope="col">ID Grupo</th>
+                          <th scope="col">Nome</th>
+                          <th scope="col">Descrição</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{{dado.grupo_id}}</td>
+                          <td>{{dado.grupo_nome}}</td>
+                          <td>{{dado.grupo_descricao}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td>{{dado.subgrupo_nome}}</td>
+                  <td>{{dado.subgrupo_descricao}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td class="sub-tabela">
+            <table class="produto-marca table">
+              <thead>
+                <tr>
+                  <th scope="col">ID Marca</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Descrição</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{dado.marca_id}}</td>
+                  <td>{{dado.marca_nome}}</td>
+                  <td>{{dado.marca_descricao}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td class="sub-tabela">
+            <table class="produto-unidade table">
+              <thead>
+                <tr>
+                  <th scope="col">ID Produto Unidade</th>
+                  <th scope="col">Sigla</th>
+                  <th scope="col">Descrição</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{dado.unidade_id}}</td>
+                  <td>{{dado.unidade_sigla}}</td>
+                  <td>{{dado.unidade_descricao}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>{{dado.produto_nome}}</td>
+          <td>{{dado.produto_gtlin}}</td>
+          <td>{{dado.produto_valor}}</td>
+          <td>{{dado.produto_data_cadastro}}</td>
+        </tr>
+      </tbody>
     </table>
   </section>
 </main>
