@@ -458,6 +458,85 @@ app.delete('/produto_subgrupo/:id', (req, res) => {
 
 // -=-=-=-=-=-=-=-=-=-=-=-=- CRUD SUBGRUPO DE PRODUTO -=-=-=-=-=-=-=-=-=-=-=-=-
 
+
+// -=-=-=-=-=-=-=-=-=-=-=-=- CONSULTA PERSONALIZADA -=-=-=-=-=-=-=-=-=-=-=-=-
+
+app.get('/produto_geral', (req, res) => {
+  let sql = `
+    SELECT 
+    p.id AS produto_id,
+    p.nome AS produto_nome,
+    p.valor AS produto_valor,
+    p.data_cadastro AS produto_data_cadastro,
+    m.id AS marca_id,
+    m.nome AS marca_nome,
+    m.descricao AS marca_descricao,
+    g.id AS grupo_id,
+    g.nome AS grupo_nome,
+    g.descricao AS grupo_descricao,
+    sg.id AS subgrupo_id,
+    sg.nome AS subgrupo_nome,
+    sg.descricao AS subgrupo_descricao,
+    u.id AS unidade_id,
+    u.sigla AS unidade_sigla,
+    u.descricao AS unidade_descricao
+    FROM produto p
+    JOIN produto_marca m ON p.id_produto_marca = m.id
+    JOIN produto_subgrupo sg ON p.id_produto_subgrupo = sg.id
+    JOIN produto_grupo g ON sg.id_produto_grupo = g.id
+    JOIN produto_unidade u ON p.id_produto_unidade = u.id`;
+  db.all(sql, (err, rows) => {
+      if (err) {
+          res.status(500).json({ error: err.message });
+          return;
+      }
+      res.json(rows);
+  });
+});
+
+app.get('/produto_geral/:id', (req, res) => {
+  const produtoGeralId = req.params.id;
+  let sql = `
+    SELECT 
+    p.id AS produto_id,
+    p.nome AS produto_nome,
+    p.valor AS produto_valor,
+    m.nome AS marca_nome,
+    m.descricao AS marca_descricao,
+    g.nome AS grupo_nome,
+    g.descricao AS grupo_descricao,
+    sg.nome AS subgrupo_nome,
+    sg.descricao AS subgrupo_descricao,
+    u.sigla AS unidade_sigla,
+    u.descricao AS unidade_descricao
+    FROM produto p
+    JOIN produto_marca m ON p.id_produto_marca = m.id
+    JOIN produto_subgrupo sg ON p.id_produto_subgrupo = sg.id
+    JOIN produto_grupo g ON sg.id_produto_grupo = g.id
+    JOIN produto_unidade u ON p.id_produto_unidade = u.id
+    WHERE p.id = ?`;
+
+  db.get(sql, produtoGeralId, (err, row) => {
+      if (err) {
+          res.status(500).json({ error: err.message });
+          return;
+      }
+      if (!row) {
+          res.status(404).json({ message: 'Subgrupo de produto não encontrado' });
+          return;
+      }
+      res.json(row);
+  });
+});
+
+db.run("PRAGMA foreign_keys = ON;", function(err) {
+  if (err) {
+      console.error("Erro ao ativar a verificação de chaves estrangeiras:", err.message);
+  } else {
+      console.log("Verificação de chaves estrangeiras ativada com sucesso.");
+  }
+});
+
 // Inicie o servidor
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
