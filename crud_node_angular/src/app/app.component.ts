@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from './controller/api.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  itens: string[] = ['Item 1', 'Item 2', 'Item 3'];
   title = 'crud_node_angular';
+  dados: any;
+
+  constructor(private apiService: ApiService) { } 
+
+  ngOnInit():void { this.apiService.getDados().subscribe(
+      (data) => {
+        this.dados = data; console.
+          log
+          (this.dados);
+      });
+  }
 }

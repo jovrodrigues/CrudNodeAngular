@@ -1,5 +1,6 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
+const cors = require('cors'); 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,6 +10,7 @@ const db = new sqlite3.Database('produtos.db');
 
 // Middleware para analisar solicitações JSON
 app.use(express.json());
+app.use(cors()); 
 
 
 // -=-=-=-=-=-=-=-=-=-=-=-=- CRUD PRODUTO -=-=-=-=-=-=-=-=-=-=-=-=-
@@ -467,6 +469,7 @@ app.get('/produto_geral', (req, res) => {
     p.id AS produto_id,
     p.nome AS produto_nome,
     p.valor AS produto_valor,
+    p.gtlin AS produto_gtlin,
     p.data_cadastro AS produto_data_cadastro,
     m.id AS marca_id,
     m.nome AS marca_nome,
@@ -501,12 +504,18 @@ app.get('/produto_geral/:id', (req, res) => {
     p.id AS produto_id,
     p.nome AS produto_nome,
     p.valor AS produto_valor,
+    p.gtlin AS produto_gtlin,
+    p.data_cadastro AS produto_data_cadastro,
+    m.id AS marca_id,
     m.nome AS marca_nome,
     m.descricao AS marca_descricao,
+    g.id AS grupo_id,
     g.nome AS grupo_nome,
     g.descricao AS grupo_descricao,
+    sg.id AS subgrupo_id,
     sg.nome AS subgrupo_nome,
     sg.descricao AS subgrupo_descricao,
+    u.id AS unidade_id,
     u.sigla AS unidade_sigla,
     u.descricao AS unidade_descricao
     FROM produto p
