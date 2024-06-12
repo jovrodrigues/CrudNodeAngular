@@ -32,7 +32,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
-    MatSlideToggleModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
