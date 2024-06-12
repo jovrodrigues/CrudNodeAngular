@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private apiService: ApiService) { } 
 
   ngOnInit():void { this.apiService.getDados().subscribe(
-      (data: any) => {
+      (data) => {
         this.dados = data; console.
           log
           (this.dados);
