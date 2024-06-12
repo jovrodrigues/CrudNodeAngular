@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+.cache/
 
 # Node
 /node_modules
@@ -40,3 +41,19 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+#json
+*package-lock.json
+package-lock.json
+/package-lock.json
+
+
+# Outros arquivos gerados automaticamente
+*.log
+*.pid
+*.seed
+*.pid.lock
+*.log.*
+.npm
+.pnp
+.pnp.js
