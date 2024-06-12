@@ -1,30 +1,36 @@
-thead {
-    background-color: aquamarine;
+td, th {
+    text-align: center;
+    vertical-align: middle;
 }
 
-tr {
-    background-color:greenyellow;
-}
-
-.botoes_crud {
+#table_externo {
     display: flex;
-    justify-content: space-evenly;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.botao_crud {
-    height: 32px;
-    width: 32px;
-    border-radius: 3px;
+#sup_tabela_subgrupo, #inf_tabela_subgrupo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+#nav_tabela_subgrupo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#botao_editar {
-    background-color: red;
-}
-
-#botao_excluir {
-    background-color: dodgerblue;
+#pesquisar_subgrupo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
