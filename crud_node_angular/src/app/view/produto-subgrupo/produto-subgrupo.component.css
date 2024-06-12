@@ -1,0 +1,30 @@
+thead {
+    background-color: aquamarine;
+}
+
+tr {
+    background-color:greenyellow;
+}
+
+.botoes_crud {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.botao_crud {
+    height: 32px;
+    width: 32px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botao_editar {
+    background-color: red;
+}
+
+#botao_excluir {
+    background-color: dodgerblue;
+}
