@@ -27,7 +27,7 @@ export class ApiService {
   getSubgrupo(): Observable<Subgrupo[]> { return this.http.get<Subgrupo[]>(`${this.apiUrl}/produto_subgrupo`); }
   postSubgrupo(data : Subgrupo): Observable<Subgrupo> { return this.http.post<Subgrupo>(`${this.apiUrl}/produto_subgrupo`, data); }
   //putSubgrupo(id : number) : Observable<> { return this.http.put<null>(`${this.apiUrl}/produto_subgrupo/${id}`); }
-  deleteSubgrupo(id : number) { return this.http.delete<Subgrupo>(`${this.apiUrl}/produto_subgrupo/${id}`); }
+  deleteSubgrupo(id : any) { return this.http.delete(`${this.apiUrl}/produto_subgrupo/${id}`); }
 
 
   getMarca(): Observable<Marca[]> { return this.http.get<Marca[]>(`${this.apiUrl}/produto_marca`); }
