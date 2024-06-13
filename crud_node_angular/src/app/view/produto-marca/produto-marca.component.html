@@ -1,29 +1,83 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+<main>
+    <h1>Produto Marca</h1>
+    <section id="container_produto_marca" class="table-responsive">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <form id="produto_marca_resultados" class="flex_row" role="search">
+                    <input class="form-control me-2" type="number" aria-label="Resultados por página" id="resultados"
+                        min="5" value="10">
+                    <p>Resultados por página</p>
+                </form>
+                <form id="produto_marca_search" class="flex_row" role="search">
+                    <label for="search">Pesquisar</label>
+                    <input class="form-control me-2" type="search" aria-label="Search" id="search">
+                </form>
+            </div>
+        </nav>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="flex_row botoes_crud">
+                            <button type="button" class="botao_crud" id="botao_editar">
+                                <img src="../../../assets/icone_editar.svg" alt="Ícone edição">
+                            </button>
+                            <button type="button" class="botao_crud" id="botao_excluir">
+                                <img src="../../../assets/icone_excluir.svg" alt="Ícone exclusão">
+                            </button>
+                        </div>
+                    </td>
+                    <td>696969</td>
+                    <td>UM NOME BEM EXTENSO</td>
+                    <td>UMA DESCRIÇÃO MAIOR AINDAAA</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="flex_row botoes_crud">
+                            <button type="button" class="botao_crud" id="botao_editar">
+                                <img src="../../../assets/icone_editar.svg" alt="Ícone edição">
+                            </button>
+                            <button type="button" class="botao_crud" id="botao_excluir">
+                                <img src="../../../assets/icone_excluir.svg" alt="Ícone exclusão">
+                            </button>
+                        </div>
+                    </td>
+                    <td>696969</td>
+                    <td>UM NOME BEM EXTENSO</td>
+                    <td>UMA DESCRIÇÃO MAIOR AINDAAA</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="mostrar_resultados" class="flex_row">
+            <p>Mostrando 0 a 0 de 0 entradas</p>
+            <nav id="botoes_paginas" aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <span class="page-link">Previous</span>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <span class="page-link">1</span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="flex_row centralizante">
+            <button type="button" class="" id="botao_inserir">
+                <img src="../../../assets/icone_inserir.svg" alt="Ícone inserir">
+            </button>
+        </div>
+    </section>
+</main>
