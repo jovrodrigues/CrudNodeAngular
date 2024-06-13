@@ -13,6 +13,9 @@ import { ProdutoMarcaComponent } from './view/produto-marca/produto-marca.compon
 import { ProdutoUnidadeComponent } from './view/produto-unidade/produto-unidade.component';
 import { ProdutoComponent } from './view/produto/produto.component';
 import { HeaderComponent } from './view/header/header.component';
+import { SubgrupoInserirComponent } from './view/subgrupo-inserir/subgrupo-inserir.component';
+import { GrupoInserirComponent } from './view/grupo-inserir/grupo-inserir.component';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +27,15 @@ import { HeaderComponent } from './view/header/header.component';
     ProdutoMarcaComponent,
     ProdutoUnidadeComponent,
     ProdutoComponent,
-    HeaderComponent
+    HeaderComponent,
+    SubgrupoInserirComponent,
+    GrupoInserirComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

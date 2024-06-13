@@ -19,10 +19,6 @@ td, th {
     padding: 10px 0px;
 }
 
-.me-2 {
-    margin-right: 0 !important;
-}
-
 #pesquisar_subgrupo {
     justify-content: center;
     padding: 10px;
@@ -30,4 +26,53 @@ td, th {
 
 #inf_tabela_subgrupo {
     width: 100%;
+}
+
+
+
+/* -------------------DAQUI PRA BAIXO É ESTILO DO DIALOG------------------- */
+
+dialog {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px;
+    height: 280px;
+    border: none;
+    border-radius: 5px;
+    color: #7f7e84;
+}
+
+p{
+    margin-top: 50px;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+#dialog-btns{
+    height: 110px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.botao_dialogo {
+    height: 40px;
+    width: 50px;
+    border: 1px solid #6864d9;
+    color: #6864d9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#btn-nao{
+    margin-right: 5px;
 }

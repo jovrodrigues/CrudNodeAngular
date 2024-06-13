@@ -17,7 +17,6 @@ export class ProdutoSubgrupoComponent {
   recarregarPagina() {   
     document.location.reload(); 
   }
- 
   ngOnInit():void { this.apiService.getSubgrupo().subscribe(
       (data) => {
         data.forEach(element => {
@@ -27,4 +26,17 @@ export class ProdutoSubgrupoComponent {
       });
   }
 
+  modalOpen(): void {
+    const modal = document.getElementById("modal") as HTMLDialogElement | null;
+    if (modal) {
+      modal.showModal();
+    }
+  }
+  
+  modalClose(): void {
+    const modal = document.getElementById("modal") as HTMLDialogElement | null;
+    if (modal) {
+      modal.close();
+    }
+  }
 }

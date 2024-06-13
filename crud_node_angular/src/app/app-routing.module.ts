@@ -6,6 +6,7 @@ import { ProdutoGrupoComponent } from './view/produto-grupo/produto-grupo.compon
 import { ProdutoMarcaComponent } from './view/produto-marca/produto-marca.component';
 import { ProdutoSubgrupoComponent } from './view/produto-subgrupo/produto-subgrupo.component';
 import { ProdutoUnidadeComponent } from './view/produto-unidade/produto-unidade.component';
+import { SubgrupoInserirComponent } from './view/subgrupo-inserir/subgrupo-inserir.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'produto-grupo', component: ProdutoGrupoComponent},
   { path: 'produto-subgrupo', component: ProdutoSubgrupoComponent},
   { path: 'produto-marca', component: ProdutoMarcaComponent},
-  { path: 'produto-unidade', component: ProdutoUnidadeComponent}
+  { path: 'produto-unidade', component: ProdutoUnidadeComponent},
+  { path: 'subgrupo-inserir', component: SubgrupoInserirComponent}
 ];
 
 @NgModule({

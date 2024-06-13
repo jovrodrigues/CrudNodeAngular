@@ -1,0 +1,100 @@
+main {
+    background-color: #f7fbfa;
+    color: #6e7786;
+}
+
+td {
+    color: #747474;
+}
+
+#filtro_produto_marca {
+    justify-content: space-between;
+}
+
+#filtro_produto_marca input{
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#produto_marca_resultados p {
+    margin: 0 0 0 5px;
+}
+
+#produto_marca_resultados input {
+    width: 20%;
+
+}
+
+#produto_marca_search label {
+    margin: 0 5px 0 0;
+}
+
+#container_produto_marca {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#mostrar_resultados {
+    justify-content: space-between;
+}
+
+#mostrar_resultados p {
+    margin: auto 0;
+}
+
+#botao_anterior {
+    border-radius: 5px 0 0 5px;
+}
+
+#botao_proximo {
+    border-radius: 0 5px 5px 0;
+}
+
+.botao_pagina {
+    width: 36px;
+}
+
+.centralizante {
+    justify-content: center;
+}
+
+#botoes_paginas a{
+    color: #747474;
+}
+
+#botao_inserir {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#botao_inserir img {
+    width: 32px;
+    height: 32px;
+}
+
+.botao_ordenar {
+    background-color: inherit;
+}
+
+.botao_ordenar img {
+    width: 16px;
+    height: 16px;
+}
+
+.item_th {
+    justify-content: space-between;
+}
+
+.item_th p {
+    margin: auto 0;
+}
+
+.item_th img {
+    opacity: 0.3;
+}

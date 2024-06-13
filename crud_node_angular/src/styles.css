@@ -14,6 +14,16 @@
 th { /* cabeçalho cinza */
     background-color: #e8ebf2 !important;
     color: #6e6f83 !important;
+    border-bottom: 3px solid #e3e6ef !important;
+}
+
+td { /* linhas da tabela */
+    border-bottom: none;
+    border-top: 1px solid #e3e6ef;
+}
+
+.bg-body-tertiary {
+    background-color: #ffffff !important;
 }
 
 .botoes_crud { /* div de excluir/editar na tabela */
@@ -24,6 +34,10 @@ th { /* cabeçalho cinza */
     height: 100%;
 }
 
+.me-2 {
+    margin-right: 0 !important;
+}
+
 .botao_crud { /* botão individual */
     height: 32px;
     width: 32px;
@@ -32,6 +46,7 @@ th { /* cabeçalho cinza */
     margin: 0px 5px;
     justify-content: center;
     align-items: center;
+    border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -68,4 +83,8 @@ th { /* cabeçalho cinza */
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.girar_imagem {
+    transform: rotate(90deg) !important;
 }

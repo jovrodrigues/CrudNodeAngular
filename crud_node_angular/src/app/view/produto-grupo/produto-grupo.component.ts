@@ -6,6 +6,7 @@ import { Grupo } from 'src/app/model/grupo';
   selector: 'app-produto-grupo',
   templateUrl: './produto-grupo.component.html',
   styleUrls: ['./produto-grupo.component.css']
+  
 })
 export class ProdutoGrupoComponent {
 
