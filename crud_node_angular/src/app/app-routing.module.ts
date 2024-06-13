@@ -8,9 +8,9 @@ import { ProdutoSubgrupoComponent } from './view/produto-subgrupo/produto-subgru
 import { ProdutoUnidadeComponent } from './view/produto-unidade/produto-unidade.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent},
+  { path: '', component: DashboardComponent},
   { path: 'produto', component: ProdutoComponent},
-  { path: '', component: ProdutoGrupoComponent},
+  { path: 'produto-grupo', component: ProdutoGrupoComponent},
   { path: 'produto-subgrupo', component: ProdutoSubgrupoComponent},
   { path: 'produto-marca', component: ProdutoMarcaComponent},
   { path: 'produto-unidade', component: ProdutoUnidadeComponent}
