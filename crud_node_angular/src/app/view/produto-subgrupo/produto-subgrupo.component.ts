@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./produto-subgrupo.component.css']
 })
 export class ProdutoSubgrupoComponent {
+  constructor() {}
 
+  modalOpen(): void {
+    const modal = document.getElementById("modal") as HTMLDialogElement | null;
+    if (modal) {
+      modal.showModal();
+    }
+  }
+  
+  modalClose(): void {
+    const modal = document.getElementById("modal") as HTMLDialogElement | null;
+    if (modal) {
+      modal.close();
+    }
+  }
 }
