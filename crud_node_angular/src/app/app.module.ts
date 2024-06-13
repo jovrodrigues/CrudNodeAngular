@@ -13,7 +13,7 @@ import { ProdutoSubgrupoComponent } from './view/produto-subgrupo/produto-subgru
 import { ProdutoMarcaComponent } from './view/produto-marca/produto-marca.component';
 import { ProdutoUnidadeComponent } from './view/produto-unidade/produto-unidade.component';
 import { ProdutoComponent } from './view/produto/produto.component';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +32,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

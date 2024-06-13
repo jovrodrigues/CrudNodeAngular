@@ -1,0 +1,93 @@
+main {
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.itens_pagina {
+  width: 15vw;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+
+.itens_pagina input {
+  width: 3vw;
+}
+
+.pro_grupo_container {
+  width: 80vw;
+}
+
+.bg-body-tertiary  {
+
+  background-color: white !important;
+}
+
+.btn {
+  width: 10vw;
+}
+
+.paginacao {
+  width: 65vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.botoes_crud {
+  display: flex;
+  width: 90%;
+  align-items:center;
+  justify-content:center;
+  height: 100%;
+}
+
+.botao_crud {
+  height: 32px;
+  width: 32px;
+  border-radius: 3px;
+  display: flex;
+  margin: 0px 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#botao_editar {
+  background-color: #3bb9f4;
+  border: none;
+}
+
+#botao_excluir {
+  background-color: #fb544b;
+  border: none;
+}
+.prod_grupo_tabela_inf {
+  display: flex;
+  align-items: center;
+}
+
+.paginacao > .bg-body-tertiary {
+  height: 37px !important;
+}
+
+.inserir {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  display: flex;
+}
+
+.prod_grupo_bt_inserir {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  display: flex;
+  margin: 0px 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #3bb9f4;
+}
