@@ -4,17 +4,14 @@ td, th {
 }
 
 #table_externo {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
+    padding: 10px 20px 20px;
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#sup_tabela_subgrupo, #inf_tabela_subgrupo {
+#sup_tabela_subgrupo, #paginas_subgrupo {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -22,15 +19,15 @@ td, th {
     padding: 10px 0px;
 }
 
-#nav_tabela_subgrupo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.me-2 {
+    margin-right: 0 !important;
 }
 
 #pesquisar_subgrupo {
-    display: flex;
     justify-content: center;
-    align-items: center;
     padding: 10px;
+}
+
+#inf_tabela_subgrupo {
+    width: 100%;
 }

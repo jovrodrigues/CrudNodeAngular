@@ -4,21 +4,27 @@
     box-sizing: border-box;
 }
 
-.titulo_tabela {
+.titulo_tabela { /* nome da tabela */
     color: #4d5fdb;
     font-weight: bold;
+    padding-left: 20px;
     font-size: 30px;
 }
 
-.botoes_crud {
+th { /* cabeçalho cinza */
+    background-color: #e8ebf2 !important;
+    color: #6e6f83 !important;
+}
+
+.botoes_crud { /* div de excluir/editar na tabela */
     display: flex;
-    width: 90%;
+    width: 100%;
     align-items:center;
     justify-content:center;
     height: 100%;
 }
 
-.botao_crud {
+.botao_crud { /* botão individual */
     height: 32px;
     width: 32px;
     border-radius: 3px;
@@ -26,6 +32,7 @@
     margin: 0px 5px;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #botao_editar {
@@ -36,24 +43,28 @@
     background-color: #fb544b;
 }
 
-th {
-    background-color: #e8ebf2 !important;
-    color: #6e6f83 !important;
+#botao_inserir {
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    background-color: #50d8d8;
 }
 
-.pagination {
+.pagination { /* cor das páginas da tabela na navegação */
     --bs-pagination-active-border-color: #6876f0;
     --bs-pagination-color:  #6876f0;
     --bs-pagination-active-bg: #6876f0;
     --bs-pagination-hover-color: #4d5fdb;
     --bs-pagination-focus-color: #4d5fdb;
-}.flex-row {
+}
+
+.flex_row {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.flex-column {
+.flex_column {
     display: flex;
     flex-direction: column;
     align-items: center;
