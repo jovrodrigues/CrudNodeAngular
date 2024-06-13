@@ -10,7 +10,7 @@ import { Marca } from 'src/app/model/marca';
 export class ProdutoMarcaComponent {
   
   dados: any;
-  objetosUnidade : Marca[] = [];
+  objetosMarca : Marca[] = [];
  
   constructor(private apiService: ApiService) { }
 
@@ -21,7 +21,7 @@ export class ProdutoMarcaComponent {
   ngOnInit():void { this.apiService.getMarca().subscribe(
       (data) => {
         data.forEach(element => {
-          this.objetosUnidade.push(element);
+          this.objetosMarca.push(element);
         });
       });
   }
