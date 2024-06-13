@@ -77,3 +77,24 @@ td {
     width: 32px;
     height: 32px;
 }
+
+.botao_ordenar {
+    background-color: inherit;
+}
+
+.botao_ordenar img {
+    width: 16px;
+    height: 16px;
+}
+
+.item_th {
+    justify-content: space-between;
+}
+
+.item_th p {
+    margin: auto 0;
+}
+
+.item_th img {
+    opacity: 0.3;
+}
