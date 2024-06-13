@@ -3,18 +3,7 @@ main {
     color: #6e7786;
 }
 
-th {
-    background-color: #e8ebf2;
-    border-bottom: 3px solid #e3e6ef;
-    color: #6e7786;
-}
-
-tr {
-    border-top: 1px solid #e3e6ef;
-}
-
 td {
-    border: none;
     color: #747474;
 }
 
@@ -49,44 +38,12 @@ td {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.botoes_crud {
-    display: flex;
-    width: 90%;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.botao_crud {
-    padding: 0;
-    height: 32px;
-    width: 32px;
-    border-radius: 3px;
-    margin: 0px 5px;
-    justify-content: center;
-    border: none;
-}
-
 #mostrar_resultados {
     justify-content: space-between;
 }
 
 #mostrar_resultados p {
     margin: auto 0;
-}
-
-#botao_editar {
-    background-color: #3bb9f4;
-}
-
-#botao_excluir {
-    background-color: #fb544b;
-}
-
-#botao_inserir {
-    background-color: #50d8d8;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #botao_anterior {
