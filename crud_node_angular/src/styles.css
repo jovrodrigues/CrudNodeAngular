@@ -34,6 +34,10 @@ td { /* linhas da tabela */
     height: 100%;
 }
 
+.me-2 {
+    margin-right: 0 !important;
+}
+
 .botao_crud { /* botão individual */
     height: 32px;
     width: 32px;
@@ -42,14 +46,15 @@ td { /* linhas da tabela */
     margin: 0px 5px;
     justify-content: center;
     align-items: center;
+    border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#botao_editar {
+.botao_editar {
     background-color: #3bb9f4;
 }
 
-#botao_excluir {
+.botao_excluir {
     background-color: #fb544b;
 }
 
