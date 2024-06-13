@@ -19,10 +19,6 @@ td, th {
     padding: 10px 0px;
 }
 
-.me-2 {
-    margin-right: 0 !important;
-}
-
 #pesquisar_subgrupo {
     justify-content: center;
     padding: 10px;
@@ -31,7 +27,6 @@ td, th {
 #inf_tabela_subgrupo {
     width: 100%;
 }
-
 
 
 
@@ -63,10 +58,9 @@ h3{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-
 }
 
-button{
+.botao_dialogo {
     height: 40px;
     width: 50px;
     border: 1px solid #6864d9;
