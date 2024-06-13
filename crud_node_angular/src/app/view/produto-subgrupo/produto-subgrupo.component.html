@@ -2,13 +2,13 @@
     <div class="titulo_tabela">
         Subgrupo
     </div>
-    <div id="table_externo" class="table-responsive">
+    <div id="table_externo" class="table-responsive flex_column">
         <div id="sup_tabela_subgrupo">
             <div>
                 10 resultados por página
             </div>
             <form class="d-flex" role="search">
-                <label for="pesquisa_subgrupo" id="pesquisar_subgrupo">Pesquisar</label>
+                <label for="pesquisa_subgrupo" id="pesquisar_subgrupo" class="flex_row">Pesquisar</label>
                 <input class="form-control me-2" type="search" name="pesquisa_subgrupo">
             </form>
         </div>
@@ -74,25 +74,30 @@
             </tbody>
         </table>
         <div id="inf_tabela_subgrupo">
-            <div>
-                Mostrando 1 a 2 de 2 entradas
-            </div>
-            <div id="nav_tabela_subgrupo">
-                <nav aria-label="...">
+            <div id="paginas_subgrupo">
+                <div>
+                    Mostrando 1 a 2 de 2 entradas
+                </div>
+                <nav aria-label="..." id="nav_tabela" class="flex_row">
                     <ul class="pagination">
                     <li class="page-item disabled">
                     <span class="page-link">Anterior</span>
                     </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
                     <li class="page-item active" aria-current="page">
-                    <span class="page-link">2</span>
-                    </li>
+                        <span class="page-link">1</span>
+                        </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item">
                     <a class="page-link" href="#">Próximo</a>
                     </li>
                     </ul>
-                    </nav>
+                </nav>
+            </div>
+            <div class="botoes_crud flex_column">
+                <button type="button" class="botao_crud" id="botao_inserir">
+                    <img src="../../../assets/imgs/icone_inserir.svg" alt="Ícone inserção">
+                </button>
             </div>
         </div>
     </div>
