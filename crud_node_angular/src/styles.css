@@ -79,3 +79,7 @@ td { /* linhas da tabela */
     flex-direction: column;
     align-items: center;
 }
+
+.girar_imagem {
+    transform: rotate(90deg) !important;
+}
