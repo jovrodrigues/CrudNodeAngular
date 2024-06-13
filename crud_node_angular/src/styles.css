@@ -1,4 +1,53 @@
-.flex-row {
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.titulo_tabela {
+    color: #4d5fdb;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.botoes_crud {
+    display: flex;
+    width: 90%;
+    align-items:center;
+    justify-content:center;
+    height: 100%;
+}
+
+.botao_crud {
+    height: 32px;
+    width: 32px;
+    border-radius: 3px;
+    display: flex;
+    margin: 0px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#botao_editar {
+    background-color: #3bb9f4;
+}
+
+#botao_excluir {
+    background-color: #fb544b;
+}
+
+th {
+    background-color: #e8ebf2 !important;
+    color: #6e6f83 !important;
+}
+
+.pagination {
+    --bs-pagination-active-border-color: #6876f0;
+    --bs-pagination-color:  #6876f0;
+    --bs-pagination-active-bg: #6876f0;
+    --bs-pagination-hover-color: #4d5fdb;
+    --bs-pagination-focus-color: #4d5fdb;
+}.flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
