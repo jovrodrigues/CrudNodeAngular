@@ -14,6 +14,16 @@
 th { /* cabeçalho cinza */
     background-color: #e8ebf2 !important;
     color: #6e6f83 !important;
+    border-bottom: 3px solid #e3e6ef !important;
+}
+
+td { /* linhas da tabela */
+    border-bottom: none;
+    border-top: 1px solid #e3e6ef;
+}
+
+.bg-body-tertiary {
+    background-color: #ffffff !important;
 }
 
 .botoes_crud { /* div de excluir/editar na tabela */
