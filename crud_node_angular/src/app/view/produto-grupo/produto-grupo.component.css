@@ -1,11 +1,11 @@
-main {
+/* main {
   display: flex;
   justify-content: flex-end;
   height: 100vh;
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
-}
+} */
 
 
 .itens_pagina {
@@ -20,7 +20,7 @@ main {
 }
 
 .pro_grupo_container {
-  width: 80vw;
+  /* width: 80vw; */
 }
 
 .bg-body-tertiary  {
@@ -33,7 +33,7 @@ main {
 }
 
 .paginacao {
-  width: 65vw;
+  width: 87%;
   display: flex;
   justify-content: flex-end;
 }

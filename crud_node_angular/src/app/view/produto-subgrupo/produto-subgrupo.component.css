@@ -1,0 +1,33 @@
+td, th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#table_externo {
+    justify-content: center;
+    padding: 10px 20px 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#sup_tabela_subgrupo, #paginas_subgrupo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.me-2 {
+    margin-right: 0 !important;
+}
+
+#pesquisar_subgrupo {
+    justify-content: center;
+    padding: 10px;
+}
+
+#inf_tabela_subgrupo {
+    width: 100%;
+}
