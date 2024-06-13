@@ -23,52 +23,28 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr *ngFor="let elemento of objetosSubgrupo">
                     <td>
                         <div class="botoes_crud">
-                            <button type="button" class="botao_crud" id="botao_editar">
+                            <button type="button" class="botao_crud botao_editar" id="{{ elemento.id }}">
                                 <img src="../../../assets/imgs/icone_editar.svg" alt="Ícone edição">
                             </button>
-                            <button type="button" class="botao_crud" id="botao_excluir">
+                            <button type="button" class="botao_crud botao_excluir" id="{{ elemento.id }}">
                                 <img src="../../../assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
                             </button>
                         </div>
                     </td>
                     <td>
-                        1
+                        {{ elemento.id }}
                     </td>
                     <td>
-                        Salame
+                        {{ elemento.nome }}
                     </td>
                     <td>
-                        Frios
+                        {{ elemento.id_produto_grupo }}
                     </td>
                     <td>
-                        Salaminho salaminho salaminho.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="botoes_crud">
-                            <button type="button" class="botao_crud" id="botao_editar">
-                                <img src="../../../assets/imgs/icone_editar.svg" alt="Ícone edição">
-                            </button>
-                            <button type="button" class="botao_crud" id="botao_excluir">
-                                <img src="../../../assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
-                            </button>
-                        </div>
-                    </td>
-                    <td>
-                        2
-                    </td>
-                    <td>
-                        Salame
-                    </td>
-                    <td>
-                        Frios
-                    </td>
-                    <td>
-                        Salaminho salaminho salaminho salaminho salaminho salaminho salaminho.
+                        {{ elemento.descricao }}
                     </td>
                 </tr>
             </tbody>
@@ -76,7 +52,7 @@
         <div id="inf_tabela_subgrupo">
             <div id="paginas_subgrupo">
                 <div>
-                    Mostrando 1 a 2 de 2 entradas
+                    Mostrando 1 a {{ objetosSubgrupo.length }} de {{ objetosSubgrupo.length }} entradas
                 </div>
                 <nav aria-label="..." id="nav_tabela" class="flex_row">
                     <ul class="pagination">

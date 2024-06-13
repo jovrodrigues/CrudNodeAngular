@@ -35,11 +35,11 @@ th { /* cabeçalho cinza */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#botao_editar {
+.botao_editar {
     background-color: #3bb9f4;
 }
 
-#botao_excluir {
+.botao_excluir {
     background-color: #fb544b;
 }
 
