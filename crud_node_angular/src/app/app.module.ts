@@ -16,6 +16,7 @@ import { HeaderComponent } from './view/header/header.component';
 import { SubgrupoInserirComponent } from './view/subgrupo-inserir/subgrupo-inserir.component';
 import { GrupoInserirComponent } from './view/grupo-inserir/grupo-inserir.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,7 @@ import { GrupoInserirComponent } from './view/grupo-inserir/grupo-inserir.compon
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
