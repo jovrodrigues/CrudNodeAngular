@@ -12,6 +12,10 @@ import { GrupoInserirComponent } from './view/grupo-inserir/grupo-inserir.compon
 import { GrupoEditarComponent } from './view/grupo-editar/grupo-editar.component';
 import { SubgrupoEditarComponent } from './view/subgrupo-editar/subgrupo-editar.component';
 import { MarcaEditarComponent } from './view/marca-editar/marca-editar.component';
+import { UnidadeInserirComponent } from './view/unidade-inserir/unidade-inserir.component';
+import { UnidadeEditarComponent } from './view/unidade-editar/unidade-editar.component';
+import { ProdutoInserirComponent } from './view/produto-inserir/produto-inserir.component';
+import { ProdutoEditarComponent } from './view/produto-editar/produto-editar.component';
 
 
 const routes: Routes = [
@@ -25,8 +29,12 @@ const routes: Routes = [
   { path: 'subgrupo-inserir', component: SubgrupoInserirComponent},
   { path: 'marca-inserir', component: MarcaInserirComponent},
   { path: 'grupo-inserir', component: GrupoInserirComponent},
+  { path: 'unidade-inserir', component: UnidadeInserirComponent},
+  { path: 'produto-inserir', component: ProdutoInserirComponent},
   { path: 'grupo-editar', component: GrupoEditarComponent},
   { path: 'subgrupo-editar', component: SubgrupoEditarComponent},
+  { path: 'unidade-editar', component: UnidadeEditarComponent},
+  { path: 'produto-editar', component: ProdutoEditarComponent},
   { path: 'marca-editar', component: MarcaEditarComponent}
 ];
 
