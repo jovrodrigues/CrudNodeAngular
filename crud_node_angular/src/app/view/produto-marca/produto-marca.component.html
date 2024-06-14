@@ -1,3 +1,13 @@
+<!-- -------------------POP-UP DELETE------------------- -->
+<dialog id="modal">
+    <h3 id="dialogo-excluir">Excluir Registro</h3>
+    <p id="dialogo-texto">Tem certeza que você quer deletar esse registro?</p>
+    <div id="dialog-btns">
+        <button (click)="modalClose()" class="botao_dialogo" id="btn-nao">Não</button>
+        <button class="botao_dialogo">Sim</button>
+    </div>
+</dialog>
+<!-- --------------------------------------------------------- -->
 <main>
     <div class="titulo_tabela">Produto Marca</div>
     <section id="container_produto_marca" class="table-responsive">
@@ -51,10 +61,10 @@
                 <tr *ngFor="let elemento of objetosMarca">
                     <td>
                         <div class="flex_row botoes_crud">
-                            <button type="button" class="botao_crud botao_editar" id="{{ elemento.id }}">
+                            <button type="button" class="botao_crud botao_editar" id="{{ elemento.id }}" routerLink="/marca-editar">
                                 <img src="../../../assets/imgs/icone_editar.svg" alt="Ícone edição">
                             </button>
-                            <button type="button" class="botao_crud botao_excluir"id="{{ elemento.id }}">
+                            <button type="button" class="botao_crud botao_excluir" id="{{ elemento.id }}" (click)="modalOpen()">
                                 <img src="../../../assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
                             </button>
                         </div>
@@ -84,7 +94,7 @@
             </nav>
         </div>
         <div class="flex_row centralizante">
-            <button type="button" class="" id="botao_inserir">
+            <button type="button" class="" id="botao_inserir" routerLink="/marca-inserir">
                 <img src="../../../assets/imgs/icone_inserir.svg" alt="Ícone inserir">
             </button>
         </div>
