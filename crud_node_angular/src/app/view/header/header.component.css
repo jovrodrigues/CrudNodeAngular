@@ -1,12 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-}
 
-body {
-  height: 100vh;
-  background-color: gray !important;
-}
 
 #header_cabecalho_container {
   padding: 0;
@@ -32,12 +24,6 @@ body {
 .header_icones {
   width: 3rem;
   height: 3rem;
-  padding: 0.5rem;
-}
-
-#header_logo {
-  width: 4rem;
-  height: 4rem;
   padding: 0.5rem;
 }
 
@@ -80,18 +66,6 @@ body {
   margin-right: 0.5rem;
 }
 
-#header_produto_container {
-  background-color: #4d5fdb;
-  min-height: 8vh;
-  width: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.5rem;
-
-}
-
 #header_user_container:hover {
   border-radius: 10px;
   padding: 0.5rem;
@@ -103,100 +77,4 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-.header_menu_nav_esquerda {
-  color: gray;
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  min-height: 92vh;
-  background-color: white;
-  height: 100%;
-}
-
-.header_itens_nav_container div {
-  padding: 1rem;
-}
-
-.header_itens_nav_container {
-  border-bottom: 1px solid lightgray;
-}
-
-.header_menu_nav_esquerda a{
-  text-decoration: none;
-  color: #575656;
-}
-
-.header_menu_nav_esquerda span {
-  color: rgb(145, 143, 143);
-}
-
-#header_simple_screens_container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.header_nav_span {
-  color: lightgray;
-}
-
-.header_nav_icones {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-#header_padding_1rem {
-  padding: 1rem;
-}
-
-.header_flex {
-  display: flex;
-}
-
-@media(min-width: 860px) {
-  #header_botao_menu a {
-    display: none;
-  }
-}
-
-@media (max-width: 860px){
-  .header_menu_nav_esquerda {
-    width: 35%;
-  }
-  #header_produto_container {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .header_icones {
-    width: 2rem;
-    height: 2rem;
-    padding: 0.1rem;
-  }
-
-  #header_nome_usuario {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 495px) {
-  #header_user_container {
-    margin-right: 1rem;
-    padding: 0;
-    margin-top: 4px;
-  }
-
-  .header_icones {
-    width: 2rem;
-    height: 2rem;
-    padding: 0;
-    margin: 0;
-  }
-
-  .header_menu_nav_esquerda {
-    width: 50%;
-  }
 }

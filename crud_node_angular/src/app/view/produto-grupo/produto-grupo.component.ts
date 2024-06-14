@@ -26,4 +26,18 @@ export class ProdutoGrupoComponent {
         });
       });
   }
+
+  modalOpen(): void {
+    const modal = document.getElementById("modal") as HTMLDialogElement | null;
+    if (modal) {
+      modal.showModal();
+    }
+  }
+  
+  modalClose(): void {
+    const modal = document.getElementById("modal") as HTMLDialogElement | null;
+    if (modal) {
+      modal.close();
+    }
+  }
 }

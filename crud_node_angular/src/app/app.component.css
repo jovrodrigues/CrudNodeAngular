@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+}
+
+
+#principal-container{
+    height: 100vh;
+    width: 100vw;
+}
+
+#navconteudo-container{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+}
+
+#conteudo-container{
+
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    background-color: #f9fdfc;
+}
+
