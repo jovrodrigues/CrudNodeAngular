@@ -19,6 +19,10 @@ import { MarcaInserirComponent } from './view/marca-inserir/marca-inserir.compon
 import { GrupoEditarComponent } from './view/grupo-editar/grupo-editar.component';
 import { SubgrupoEditarComponent } from './view/subgrupo-editar/subgrupo-editar.component';
 import { MarcaEditarComponent } from './view/marca-editar/marca-editar.component';
+import { UnidadeInserirComponent } from './view/unidade-inserir/unidade-inserir.component';
+import { UnidadeEditarComponent } from './view/unidade-editar/unidade-editar.component';
+import { ProdutoInserirComponent } from './view/produto-inserir/produto-inserir.component';
+import { ProdutoEditarComponent } from './view/produto-editar/produto-editar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { MarcaEditarComponent } from './view/marca-editar/marca-editar.component
     MarcaInserirComponent,
     GrupoEditarComponent,
     SubgrupoEditarComponent,
-    MarcaEditarComponent
+    MarcaEditarComponent,
+    UnidadeInserirComponent,
+    UnidadeEditarComponent,
+    ProdutoInserirComponent,
+    ProdutoEditarComponent
   ],
   imports: [
     BrowserModule,
