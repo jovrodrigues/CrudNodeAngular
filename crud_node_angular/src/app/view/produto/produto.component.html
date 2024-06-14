@@ -43,12 +43,12 @@
           <tr *ngFor="let elemento of objetosProdutos">
             <td scope="row">
               <div class="botoes_crud">
-                <button type="button" class="botao_crud" id="botao_editar" routerLink="/produto-editar">
-                  <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
-                </button>
-                <button type="button" class="botao_crud" id="botao_excluir">
-                  <img src="/assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
-                </button>
+                <button type="button" class="botao_crud botao_editar" id="{{ elemento.id }}" routerLink="/produto-editar" [queryParams]="{ id: elemento.id, id_produto_subgrupo : elemento.id_produto_subgrupo, id_produto_marca : elemento.id_produto_marca, id_produto_unidade : elemento.id_produto_unidade }">
+                  <img src="../../../assets/imgs/icone_editar.svg" alt="Ícone edição">
+              </button>
+                <button type="button" class="botao_crud botao_excluir" (click)="modalOpen(elemento.id)">
+                  <img src="../../../assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
+              </button>
               </div>
             </td>
             <td>{{ elemento.id }}

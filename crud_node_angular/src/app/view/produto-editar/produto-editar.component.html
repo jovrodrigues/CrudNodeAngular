@@ -27,8 +27,8 @@
                 <input class="form-control" id="input-nome" placeholder="Informe os dados para o campo Nome">
               </div>
               <div class="mb-3">
-                <label for="input-gtin" class="form-label">Gtin</label>
-                <input class="form-control" id="input-gtin" placeholder="Informe os dados para o campo Gtin">
+                <label for="input-gtln" class="form-label">Gtin</label>
+                <input class="form-control" id="input-gtln" placeholder="Informe os dados para o campo Gtin">
               </div>
               <div class="mb-3">
                 <label for="input-valor" class="form-label">Valor</label>
@@ -40,7 +40,7 @@
               </div>
               <div id="btns-container">
                   <button id="btn-cancelar"><img src="../../../assets/imgs/icone-cancelar.png" width="20px" routerLink="/produto"></button>
-                  <button type="submit" id="btn-enviar" routerLink="/produto"><img src="../../../assets/imgs/icone-enviar.png"></button>
+                  <button type="submit" id="btn-enviar" (click)="editarElemento()" routerLink="/produto"><img src="../../../assets/imgs/icone-enviar.png"></button>
               </div>
           </form>
       </div>
