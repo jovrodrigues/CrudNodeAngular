@@ -1,4 +1,14 @@
 <main>
+<!-- -------------------POP-UP DELETE------------------- -->
+<dialog id="modal">
+  <h3 id="dialogo-excluir">Excluir Registro</h3>
+  <p id="dialogo-texto">Tem certeza que você quer deletar esse registro?</p>
+  <div id="dialog-btns">
+      <button (click)="modalClose()" class="botao_dialogo" id="btn-nao">Não</button>
+      <button class="botao_dialogo" id="botao_sim">Sim</button>
+  </div>
+</dialog>
+<!-- --------------------------------------------------------- -->
   <div class="pro_grupo_container">
     <div class="titulo_tabela">Produto Unidade</div>
     <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
@@ -21,58 +31,34 @@
         <thead>
           <tr class="table-light">
             <td scope="col"></td>
-            <td scope="col">id</td>
+            <td scope="col">Id</td>
             <td scope="col">Sigla</td>
             <td scope="col">Descrição</td>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td scope="row">
-              <div class="botoes_crud">
-                <button type="button" class="botao_crud" id="botao_editar">
-                  <img src="/assets/icone_editar.svg" alt="Ícone edição">
-                </button>
-                <button type="button" class="botao_crud" id="botao_excluir">
-                  <img src="/assets/icone_excluir.svg" alt="Ícone exclusão">
-                </button>
-              </div>
-            </td>
-            <td>
-            </td>
-            <td>Otto</td>
-            <td>@mdo</td>
+          <tr *ngFor="let elemento of objetosUnidade">
+              <td>
+                  <div class="botoes_crud">
+                      <button type="button" class="botao_crud botao_editar" id="{{ elemento.id }}" routerLink="/unidade-editar" [queryParams]="{ id: elemento.id }">
+                          <img src="../../../assets/imgs/icone_editar.svg" alt="Ícone edição">
+                      </button>
+                      <button type="button" class="botao_crud botao_excluir" (click)="modalOpen(elemento.id)">
+                          <img src="../../../assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
+                      </button>
+                  </div>
+              </td>
+              <td>
+                  {{ elemento.id }}
+              </td>
+              <td>
+                  {{ elemento.sigla }}
+              </td>
+              <td>
+                  {{ elemento.descricao }}
+              </td>
           </tr>
-          <tr>
-            <td scope="row">
-              <div class="botoes_crud">
-                <button type="button" class="botao_crud" id="botao_editar">
-                  <img src="/assets/icone_editar.svg" alt="Ícone edição">
-                </button>
-                <button type="button" class="botao_crud" id="botao_excluir">
-                  <img src="/assets/icone_excluir.svg" alt="Ícone exclusão">
-                </button>
-              </div>
-            </td>
-            <td>Jacob</td>
-            <td>tdornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td scope="row">
-              <div class="botoes_crud">
-                <button type="button" class="botao_crud" id="botao_editar">
-                  <img src="/assets/icone_editar.svg" alt="Ícone edição">
-                </button>
-                <button type="button" class="botao_crud" id="botao_excluir">
-                  <img src="/assets/icone_excluir.svg" alt="Ícone exclusão">
-                </button>
-              </div>
-            </td>
-            <td colspan="2">Larry tde Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
+      </tbody>
       </table>
       <section class="prod_grupo_tabela_inf">
         <p>Mostrando 0 a 0 de 0 entradas</p>
@@ -95,11 +81,12 @@
         </nav>
       </section>
       <div class="inserir">
-        <div class="prod_grupo_bt_inserir">
-          <img src="/assets/icone_inserir.svg" alt="">
-        </div>
+        <div class="botoes_crud flex_column">
+          <button type="button" class="botao_crud" id="botao_inserir" routerLink="/unidade-inserir">
+              <img src="../../../assets/imgs/icone_inserir.svg" alt="Ícone inserção">
+          </button>
+          </div>
       </div>
     </div>
   </div>
-
 </main>

@@ -25,4 +25,29 @@ export class ProdutoUnidadeComponent {
         });
       });
   }
+  
+  modalOpen(id : any): void {
+    const modal = document.getElementById("modal") as HTMLDialogElement | null;
+
+    if (modal) {
+      let botao_sim = document.getElementById("botao_sim");
+      botao_sim?.addEventListener('click', () => {
+        this.apiService.deleteUnidades(id).subscribe(error => {
+          console.error("Não foi possível excluir.", error);
+        });
+        this.modalClose();
+        this.recarregarPagina();
+      });
+      modal.showModal();
+    }
+
+  }
+  
+  modalClose(): void {
+    const modal = document.getElementById("modal") as HTMLDialogElement | null;
+    if (modal) {
+      modal.close();
+    }
+  }
+
 }
