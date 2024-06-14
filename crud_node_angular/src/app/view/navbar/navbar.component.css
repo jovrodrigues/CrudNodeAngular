@@ -90,6 +90,7 @@
   min-width: 20vw;
   min-height: 92vh;
   background-color: white;
+  border: 1px solid #d7d3d3;
 }
 .header_itens_nav_container div {
   padding: 1rem;
