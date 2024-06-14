@@ -7,6 +7,9 @@
   margin-right: 10px;
 } */
 
+main{
+  width: 70vw;
+}
 
 .itens_pagina {
   width: 15vw;
@@ -91,3 +94,4 @@
   align-items: center;
   background-color: #3bb9f4;
 }
+

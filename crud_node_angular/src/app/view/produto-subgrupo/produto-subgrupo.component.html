@@ -1,7 +1,7 @@
 <!-- -------------------POP-UP DELETE------------------- -->
 <dialog id="modal">
-    <h3>Excluir Registro</h3>
-    <p>Tem certeza que você quer deletar esse registro?</p>
+    <h3 id="dialogo-excluir">Excluir Registro</h3>
+    <p id="dialogo-texto">Tem certeza que você quer deletar esse registro?</p>
     <div id="dialog-btns">
         <button (click)="modalClose()" class="botao_dialogo" id="btn-nao">Não</button>
         <button class="botao_dialogo" id="botao_sim">Sim</button>
@@ -10,7 +10,7 @@
 <!-- --------------------------------------------------------- -->
 <div class="container_elemento">
     <div class="titulo_tabela">
-        Subgrupo
+        Produto Subgrupo
     </div>
     <div id="table_externo" class="table-responsive flex_column">
         <div id="sup_tabela_subgrupo">
@@ -36,7 +36,7 @@
                 <tr *ngFor="let elemento of objetosSubgrupo">
                     <td>
                         <div class="botoes_crud">
-                            <button type="button" class="botao_crud botao_editar" id="{{ elemento.id }}">
+                            <button type="button" class="botao_crud botao_editar" id="{{ elemento.id }}" routerLink="/subgrupo-editar" [queryParams]="{ id: elemento.id, id_produto_grupo : elemento.id_produto_grupo }">
                                 <img src="../../../assets/imgs/icone_editar.svg" alt="Ícone edição">
                             </button>
                             <button type="button" class="botao_crud botao_excluir" (click)="modalOpen(elemento.id)">
