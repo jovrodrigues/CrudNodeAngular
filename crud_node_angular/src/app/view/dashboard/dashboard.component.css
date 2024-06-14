@@ -1,0 +1,155 @@
+.cor-fundo{
+    background-color: #f7fbfa;
+}
+
+.cor-containers{
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#dashboard-container{
+    height: 90vh;
+    overflow-y: auto;
+    width: 80vw;
+}
+
+.titulo_tabela{
+    margin-left: 25px;
+}
+
+#tittle-container > h1{
+    margin-top: 5px;
+}
+
+#grid-container{
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.grid-item{
+    height: 90%;
+    width: 22.5%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.grid-item > div{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dados-container{
+    display: flex;
+    align-items: center;
+}
+
+h3, h4, .dados-container{
+    padding: 5px;
+}
+
+h1{
+    font-weight: 400;
+}
+
+h3, h1{
+    color: #545b6b;
+}
+
+h4{
+    font-size: 16px;
+    color: #8e8c96;
+}
+
+h5{
+    color: #89c986;
+}
+
+#red{
+    color: #e9888f !important;
+}
+
+h6{
+    font-size: 14px;
+    font-weight: 400;
+    color: #a6a6a6;
+    margin-left: 10px;
+}
+
+.icone-seta{
+    width: 18px;
+}
+
+#mensal-vendas-container{
+    height: 70vh;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+}
+
+#mensal-container{
+    height: 52vh;
+    width: 49.5vw;
+    border-radius: 5px;
+}
+
+#vendas-container{
+    height: 52vh;
+    width: 24.5vw;
+    border-radius: 5px;
+}
+
+h2{
+    color: #6575ee;
+    margin: 25px 0 0 25px;
+    font-size: 18px;
+}
+
+#grafico{
+    width: 900px;
+    height: 350px;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.icones{
+    width: 70px;
+}
+
+.items{
+    width: 450px;
+    height: 22px;
+    margin-left: 15px;
+}
+
+#vendas-container > div{
+    height: 80%;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.produto{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 20px;
+}
+
+.produto > span{
+    margin-left: 16px;
+}
+
+.produto > p{
+    margin-right: 16px;
+    margin-bottom: 0;
+}
+
+.produto >p, .produto > span{
+    color: #8e8c96;
+    font-size: 16px;
+}

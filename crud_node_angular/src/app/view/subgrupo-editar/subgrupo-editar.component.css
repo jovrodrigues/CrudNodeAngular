@@ -1,5 +1,5 @@
 #inserir-container{
-    height: 35vh;
+    height: 55vh;
     width: 60vw;
     background-color: white;
     border-radius: 5px;
@@ -12,6 +12,19 @@
 #inserir-container > div{
     height: 80%;
     width: 90%;
+}
+
+#id-container{
+    margin-bottom: 40px !important;
+}
+
+#input-id{
+    box-shadow: none !important;
+    background-color: #e8ebf2;
+}
+
+#input-id:focus{
+    border-color: lightgray;
 }
 
 .form-control{
