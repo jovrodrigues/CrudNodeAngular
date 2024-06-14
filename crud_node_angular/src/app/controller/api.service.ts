@@ -21,10 +21,10 @@ export class ApiService {
   postGrupo(data : Grupo): Observable<Grupo> { return this.http.post<Grupo>(`${this.apiUrl}/produto_grupo`, data); }
   putGrupo(id : any, data: any) { return this.http.put<any>(`${this.apiUrl}/produto_grupo/${id}`, data); }
   deleteGrupo(id : any) { return this.http.delete(`${this.apiUrl}/produto_grupo/${id}`); }
-  
 
+  
   getSubgrupo(): Observable<Subgrupo[]> { return this.http.get<Subgrupo[]>(`${this.apiUrl}/produto_subgrupo`); }
-  postSubgrupo(data : Subgrupo): Observable<Subgrupo> { return this.http.post<Subgrupo>(`${this.apiUrl}/produto_subgrupo`, data); }
+  postSubgrupo(data : any): Observable<Subgrupo> { return this.http.post<Subgrupo>(`${this.apiUrl}/produto_subgrupo`, data); }
   putSubgrupo(id : any, data: any) { return this.http.put<any>(`${this.apiUrl}/produto_subgrupo/${id}`, data); }
   deleteSubgrupo(id : any) { return this.http.delete(`${this.apiUrl}/produto_subgrupo/${id}`); }
 

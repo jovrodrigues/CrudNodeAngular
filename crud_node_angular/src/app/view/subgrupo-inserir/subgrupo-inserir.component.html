@@ -5,6 +5,12 @@
     <div>
         <form>
             <div class="mb-3">
+              <label for="select-produtoGrupo" class="form-label">Id Produto Grupo</label>
+              <select class="form-select" id="select-produtoGrupo">
+                  <option>1</option>
+              </select>
+            </div>
+            <div class="mb-3">
               <label for="input-nome" class="form-label">Nome</label>
               <input class="form-control" id="input-nome" placeholder="Informe os dados para o campo Nome">
             </div>
@@ -14,8 +20,8 @@
             </div>
             <div id="btns-container">
                 <button id="btn-cancelar"><img src="../../../assets/imgs/icone-cancelar.png" width="20px" routerLink="/produto-subgrupo"></button>
-                <button type="submit" id="btn-enviar"><img src="../../../assets/imgs/icone-enviar.png"></button>
+                <button type="submit" id="btn-enviar" (click)="inserirElemento()"><img src="../../../assets/imgs/icone-enviar.png"></button>
             </div>
-          </form>
+        </form>
     </div>
 </div>

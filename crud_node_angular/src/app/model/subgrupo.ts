@@ -4,7 +4,7 @@ export class Subgrupo {
     private _nome: string;
     private _descricao: string;
   
-    constructor(id_produto_grupo: number, nome: string, descricao: string, id: number,) {
+    constructor(id_produto_grupo: number, nome: string, descricao: string, id?: number) {
       this._id_produto_grupo = id_produto_grupo;
       this._nome = nome;
       this._descricao = descricao;
