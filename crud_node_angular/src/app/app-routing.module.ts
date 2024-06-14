@@ -15,6 +15,7 @@ import { MarcaEditarComponent } from './view/marca-editar/marca-editar.component
 
 
 const routes: Routes = [
+
   { path: '', component: DashboardComponent},
   { path: 'produto', component: ProdutoComponent},
   { path: 'produto-grupo', component: ProdutoGrupoComponent},
