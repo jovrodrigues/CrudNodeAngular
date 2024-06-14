@@ -3,8 +3,8 @@
   <h3 id="dialogo-excluir">Excluir Registro</h3>
   <p id="dialogo-texto">Tem certeza que você quer deletar esse registro?</p>
   <div id="dialog-btns">
-      <button class="botao_dialogo" id="btn-nao">Não</button>
-      <button class="botao_dialogo">Sim</button>
+      <button (click)="modalClose()" class="botao_dialogo" id="btn-nao">Não</button>
+      <button class="botao_dialogo" id="botao_sim">Sim</button>
   </div>
 </dialog>
 <!-- --------------------------------------------------------- -->
@@ -40,10 +40,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let elemento of objetosProdutos">
             <td scope="row">
               <div class="botoes_crud">
-                <button type="button" class="botao_crud" id="botao_editar" routerLink="/grupo-editar">
+                <button type="button" class="botao_crud" id="botao_editar" routerLink="/produto-editar">
                   <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
                 </button>
                 <button type="button" class="botao_crud" id="botao_excluir">
@@ -51,50 +51,17 @@
                 </button>
               </div>
             </td>
-            <td>
+            <td>{{ elemento.id }}
             </td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td scope="row">
-              <div class="botoes_crud">
-                <button type="button" class="botao_crud" id="botao_editar">
-                  <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
-                </button>
-                <button type="button" class="botao_crud" id="botao_excluir">
-                  <img src="/assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
-                </button>
-              </div>
-            </td>
-            <td>Jacob</td>
-            <td>tdornton</td>
-            <td>@fat</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td scope="row">
-              <div class="botoes_crud">
-                <button type="button" class="botao_crud" id="botao_editar">
-                  <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
-                </button>
-                <button type="button" class="botao_crud" id="botao_excluir">
-                  <img src="/assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
-                </button>
-              </div>
-            </td>
-            <td colspan="2">Larry tde Bird</td>
-            <td>@twitter</td>
-            <td></td>
-            <td></td>
+            <td>{{ elemento.nome }}</td>
+            <td>{{ elemento.gtln }}</td>
+            <td>{{ elemento.valor }}</td>
+            <td>{{ elemento.data_cadastro }}</td>
           </tr>
         </tbody>
       </table>
       <section class="prod_grupo_tabela_inf">
-        <p>Mostrando 0 a 0 de 0 entradas</p>
+        <p>Mostrando 1 a {{ objetosProdutos.length }} de {{ objetosProdutos.length }} entradas</p>
         <nav aria-label="..." class="paginacao">
           <div class="shadow bg-body-tertiary rounded">
             <ul class="pagination">
@@ -114,7 +81,7 @@
         </nav>
       </section>
       <div class="inserir">
-        <button type="button" class="" id="botao_inserir" routerLink="/grupo-inserir">
+        <button type="button" class="" id="botao_inserir" routerLink="/produto-inserir">
           <img src="../../../assets/imgs/icone_inserir.svg" alt="Ícone inserir">
       </button>
       </div>
