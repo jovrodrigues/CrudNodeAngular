@@ -1,0 +1,53 @@
+#inserir-container{
+    height: 95vh;
+    width: 60vw;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+#inserir-container > div{
+    height: 80%;
+    width: 90%;
+}
+
+.form-control{
+    height: 45px;
+}
+
+.form-label, input::placeholder{
+    color: #7f7e84;
+}
+
+#btns-container{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    height: 40px;
+    width: 45px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 5px !important;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-cancelar{
+    background-color: #fe534b;
+    margin-right: 10px;
+}
+
+#btn-enviar{
+    background-color: #64bb6a;
+    margin-left: 10px;
+}

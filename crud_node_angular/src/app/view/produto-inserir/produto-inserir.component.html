@@ -4,17 +4,43 @@
   <div id="inserir-container">
       <div>
           <form>
+            <div class="mb-3">
+                <label for="select-produtoSubgrupo" class="form-label">Id Produto Subgrupo</label>
+                <select class="form-select" id="select-produtoSubgrupo">
+                    <option>1</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="select-produtoMarca" class="form-label">Id Produto Marca</label>
+                <select class="form-select" id="select-produtoMarca">
+                    <option>1</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="select-produtoUnidade" class="form-label">Id Produto Unidade</label>
+                <select class="form-select" id="select-produtoUnidade">
+                    <option>1</option>
+                </select>
+              </div>
               <div class="mb-3">
                 <label for="input-nome" class="form-label">Nome</label>
                 <input class="form-control" id="input-nome" placeholder="Informe os dados para o campo Nome">
               </div>
               <div class="mb-3">
-                <label for="input-descricao" class="form-label">Descrição</label>
-                <input class="form-control" id="input-descricao" placeholder="Informe os dados para o campo Descrição">
+                <label for="input-gtin" class="form-label">Gtin</label>
+                <input class="form-control" id="input-gtin" placeholder="Informe os dados para o campo Gtin">
+              </div>
+              <div class="mb-3">
+                <label for="input-valor" class="form-label">Valor</label>
+                <input class="form-control" id="input-valor" placeholder="Informe os dados para o campo Valor">
+              </div>
+              <div class="mb-3">
+                <label for="input-data_cadastro" class="form-label">Data Cadastro</label>
+                <input class="form-control" id="input-data_cadastro" placeholder="Informe os dados para o campo Data Cadastro">
               </div>
               <div id="btns-container">
                   <button id="btn-cancelar"><img src="../../../assets/imgs/icone-cancelar.png" width="20px" routerLink="/produto-subgrupo"></button>
-                  <!-- <button type="submit" id="btn-enviar" (click)="inserirElemento()"><img src="../../../assets/imgs/icone-enviar.png"></button> -->
+                  <button type="submit" id="btn-enviar"><img src="../../../assets/imgs/icone-enviar.png"></button>
               </div>
           </form>
       </div>

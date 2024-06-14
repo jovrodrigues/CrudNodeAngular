@@ -1,12 +1,6 @@
-/* main {
-  display: flex;
-  justify-content: flex-end;
-  height: 100vh;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-} */
-
+main{
+  width: 70vw;
+}
 
 .itens_pagina {
   width: 15vw;
@@ -24,7 +18,6 @@
 }
 
 .bg-body-tertiary  {
-
   background-color: white !important;
 }
 
@@ -33,9 +26,13 @@
 }
 
 .paginacao {
-  width: 87%;
+  width: 70%;
   display: flex;
   justify-content: flex-end;
+}
+
+p{ 
+  margin: 0;
 }
 
 .botoes_crud {
@@ -68,6 +65,7 @@
 .prod_grupo_tabela_inf {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .paginacao > .bg-body-tertiary {
@@ -90,4 +88,13 @@
   justify-content: center;
   align-items: center;
   background-color: #3bb9f4;
+}
+
+@media (max-width: 860px) {
+  #sla{
+    width: 55vw;
+  }
+  main {
+    width: 65vw;
+  }
 }
