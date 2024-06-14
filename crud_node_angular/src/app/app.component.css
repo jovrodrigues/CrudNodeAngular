@@ -2,9 +2,12 @@
     margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
 
 #principal-container{
-    height: 100vh;
+    height: 82vh;
     width: 100vw;
 }
 

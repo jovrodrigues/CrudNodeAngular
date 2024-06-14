@@ -1,13 +1,23 @@
+<!-- -------------------POP-UP DELETE------------------- -->
+<dialog id="modal">
+  <h3 id="dialogo-excluir">Excluir Registro</h3>
+  <p id="dialogo-texto">Tem certeza que você quer deletar esse registro?</p>
+  <div id="dialog-btns">
+      <button class="botao_dialogo" id="btn-nao">Não</button>
+      <button class="botao_dialogo">Sim</button>
+  </div>
+</dialog>
+<!-- --------------------------------------------------------- -->
 <main>
   <div class="pro_grupo_container">
-    <div class="titulo_tabela">Produto Unidade</div>
+    <div class="titulo_tabela">Produto</div>
     <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
 
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <div class="d-flex itens_pagina">
             <input type="number" class="form-control me-1">
-            <label for="me-1">resultados por página</label>
+            <label for="me-1">Resultados por página</label>
           </div>
           <form class="d-flex" role="search">
             <button type="button" class="btn" data-bs-toggle="button" type="submit">Pesquisar</button>
@@ -18,6 +28,7 @@
       </nav>
 
       <table class="table">
+        
         <thead>
           <tr class="table-light">
             <td scope="col"></td>
@@ -32,11 +43,11 @@
           <tr>
             <td scope="row">
               <div class="botoes_crud">
-                <button type="button" class="botao_crud" id="botao_editar">
-                  <img src="/assets/icone_editar.svg" alt="Ícone edição">
+                <button type="button" class="botao_crud" id="botao_editar" routerLink="/grupo-editar">
+                  <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
                 </button>
                 <button type="button" class="botao_crud" id="botao_excluir">
-                  <img src="/assets/icone_excluir.svg" alt="Ícone exclusão">
+                  <img src="/assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
                 </button>
               </div>
             </td>
@@ -44,35 +55,41 @@
             </td>
             <td>Otto</td>
             <td>@mdo</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td scope="row">
               <div class="botoes_crud">
                 <button type="button" class="botao_crud" id="botao_editar">
-                  <img src="/assets/icone_editar.svg" alt="Ícone edição">
+                  <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
                 </button>
                 <button type="button" class="botao_crud" id="botao_excluir">
-                  <img src="/assets/icone_excluir.svg" alt="Ícone exclusão">
+                  <img src="/assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
                 </button>
               </div>
             </td>
             <td>Jacob</td>
             <td>tdornton</td>
             <td>@fat</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td scope="row">
               <div class="botoes_crud">
                 <button type="button" class="botao_crud" id="botao_editar">
-                  <img src="/assets/icone_editar.svg" alt="Ícone edição">
+                  <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
                 </button>
                 <button type="button" class="botao_crud" id="botao_excluir">
-                  <img src="/assets/icone_excluir.svg" alt="Ícone exclusão">
+                  <img src="/assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
                 </button>
               </div>
             </td>
             <td colspan="2">Larry tde Bird</td>
             <td>@twitter</td>
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
@@ -97,9 +114,9 @@
         </nav>
       </section>
       <div class="inserir">
-        <div class="prod_grupo_bt_inserir">
-          <img src="/assets/icone_inserir.svg" alt="">
-        </div>
+        <button type="button" class="" id="botao_inserir" routerLink="/grupo-inserir">
+          <img src="../../../assets/imgs/icone_inserir.svg" alt="Ícone inserir">
+      </button>
       </div>
     </div>
   </div>
