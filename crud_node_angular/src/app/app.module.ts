@@ -20,7 +20,6 @@ import { GrupoEditarComponent } from './view/grupo-editar/grupo-editar.component
 import { SubgrupoEditarComponent } from './view/subgrupo-editar/subgrupo-editar.component';
 import { MarcaEditarComponent } from './view/marca-editar/marca-editar.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +43,7 @@ import { MarcaEditarComponent } from './view/marca-editar/marca-editar.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

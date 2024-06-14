@@ -6,11 +6,11 @@
           <form>
             <div class="mb-3" id="id-container">
                 <label for="input-id" class="form-label">Id</label>
-                <input readonly class="form-control" id="input-id">
+                <input readonly class="form-control" id="input-id" placeholder="{{ id }}">
               </div>
               <div class="mb-3">
                 <label for="input-nome" class="form-label">Nome</label>
-                <input class="form-control" id="input-nome" placeholder="Informe os dados para o campo Nome">
+                <input class="form-control" id="input-nome" type="text" placeholder="Informe os dados para o campo Nome">
               </div>
               <div class="mb-3">
                 <label for="input-descricao" class="form-label">Descrição</label>
@@ -18,7 +18,7 @@
               </div>
               <div id="btns-container">
                   <button id="btn-cancelar"><img src="../../../assets/imgs/icone-cancelar.png" width="20px" routerLink="/produto-subgrupo"></button>
-                  <button type="submit" id="btn-enviar"><img src="../../../assets/imgs/icone-enviar.png"></button>
+                  <button type="submit" id="btn-enviar" (click)="editarElemento()"><img src="../../../assets/imgs/icone-enviar.png"></button>
               </div>
             </form>
       </div>

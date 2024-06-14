@@ -10,6 +10,7 @@ import { Subgrupo } from 'src/app/model/subgrupo';
 export class ProdutoSubgrupoComponent {
 
   dados: any;
+
   objetosSubgrupo : Subgrupo[] = [];
  
   constructor(private apiService: ApiService) { }
@@ -26,11 +27,21 @@ export class ProdutoSubgrupoComponent {
       });
   }
 
-  modalOpen(): void {
+  modalOpen(id : any): void {
     const modal = document.getElementById("modal") as HTMLDialogElement | null;
+
     if (modal) {
+      let botao_sim = document.getElementById("botao_sim");
+      botao_sim?.addEventListener('click', () => {
+        this.apiService.deleteSubgrupo(id).subscribe(error => {
+          console.error("Não foi possível excluir.", error);
+        });
+        this.modalClose();
+        this.recarregarPagina();
+      });
       modal.showModal();
     }
+
   }
   
   modalClose(): void {
@@ -39,4 +50,6 @@ export class ProdutoSubgrupoComponent {
       modal.close();
     }
   }
+
+
 }
