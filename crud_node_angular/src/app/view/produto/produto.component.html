@@ -3,21 +3,21 @@
   <h3 id="dialogo-excluir">Excluir Registro</h3>
   <p id="dialogo-texto">Tem certeza que você quer deletar esse registro?</p>
   <div id="dialog-btns">
-      <button (click)="modalClose()" class="botao_dialogo" id="btn-nao">Não</button>
-      <button class="botao_dialogo" id="botao_sim">Sim</button>
+      <button class="botao_dialogo" id="btn-nao">Não</button>
+      <button class="botao_dialogo">Sim</button>
   </div>
 </dialog>
 <!-- --------------------------------------------------------- -->
 <main>
   <div class="pro_grupo_container">
     <div class="titulo_tabela">Produto</div>
-    <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+    <div class="shadow p-3 mb-5 bg-body-tertiary rounded" id="sla">
 
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <div class="d-flex itens_pagina">
             <input type="number" class="form-control me-1">
-            <label for="me-1">resultados por página</label>
+            <label for="me-1">Resultados por página</label>
           </div>
           <form class="d-flex" role="search">
             <button type="button" class="btn" data-bs-toggle="button" type="submit">Pesquisar</button>
@@ -28,6 +28,7 @@
       </nav>
 
       <table class="table">
+        
         <thead>
           <tr class="table-light">
             <td scope="col"></td>
@@ -42,19 +43,53 @@
           <tr *ngFor="let elemento of objetosProdutos">
             <td scope="row">
               <div class="botoes_crud">
-                <button type="button" class="botao_crud botao_editar" id="{{ elemento.id }}" routerLink="/produto-editar" [queryParams]="{ id: elemento.id, id_produto_subgrupo : elemento.id_produto_subgrupo, id_produto_marca : elemento.id_produto_marca, id_produto_unidade : elemento.id_produto_unidade }">
-                  <img src="../../../assets/imgs/icone_editar.svg" alt="Ícone edição">
-              </button>
-              <button type="button" class="botao_crud botao_excluir" (click)="modalOpen(elemento.id)">
-                  <img src="../../../assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
-              </button>
+                <button type="button" class="botao_crud" id="botao_editar" routerLink="/grupo-editar">
+                  <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
+                </button>
+                <button type="button" class="botao_crud" id="botao_excluir">
+                  <img src="/assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
+                </button>
               </div>
             </td>
-            <td>{{ elemento.id }}</td>
-            <td>{{ elemento.nome }}</td>
-            <td>{{ elemento.gtln }}</td>
-            <td>{{ elemento.valor }}</td>
-            <td>{{ elemento.data_cadastro }}</td>
+            <td>
+            </td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <div class="botoes_crud">
+                <button type="button" class="botao_crud" id="botao_editar">
+                  <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
+                </button>
+                <button type="button" class="botao_crud" id="botao_excluir">
+                  <img src="/assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
+                </button>
+              </div>
+            </td>
+            <td>Jacob</td>
+            <td>tdornton</td>
+            <td>@fat</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <div class="botoes_crud">
+                <button type="button" class="botao_crud" id="botao_editar">
+                  <img src="/assets/imgs/icone_editar.svg" alt="Ícone edição">
+                </button>
+                <button type="button" class="botao_crud" id="botao_excluir">
+                  <img src="/assets/imgs/icone_excluir.svg" alt="Ícone exclusão">
+                </button>
+              </div>
+            </td>
+            <td colspan="2">Larry tde Bird</td>
+            <td>@twitter</td>
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
@@ -79,8 +114,8 @@
         </nav>
       </section>
       <div class="inserir">
-        <button type="button" class="botao_crud" id="botao_inserir" routerLink="/produto-inserir">
-          <img src="../../../assets/imgs/icone_inserir.svg" alt="Ícone inserção">
+        <button type="button" class="" id="botao_inserir" routerLink="/grupo-inserir">
+          <img src="../../../assets/imgs/icone_inserir.svg" alt="Ícone inserir">
       </button>
       </div>
     </div>
