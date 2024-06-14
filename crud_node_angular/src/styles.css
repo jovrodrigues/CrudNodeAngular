@@ -5,10 +5,11 @@
 }
 
 .titulo_tabela { /* nome da tabela */
-    color: #4d5fdb;
+    color: #554f55;
     font-weight: bold;
-    padding-left: 20px;
-    font-size: 30px;
+    padding: 20px 0 20px 0;
+    font-size: 35px;
+    font-weight: 400;
 }
 
 th { /* cabeçalho cinza */
@@ -34,6 +35,10 @@ td { /* linhas da tabela */
     height: 100%;
 }
 
+.me-2 {
+    margin-right: 0 !important;
+}
+
 .botao_crud { /* botão individual */
     height: 32px;
     width: 32px;
@@ -42,14 +47,15 @@ td { /* linhas da tabela */
     margin: 0px 5px;
     justify-content: center;
     align-items: center;
+    border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#botao_editar {
+.botao_editar {
     background-color: #3bb9f4;
 }
 
-#botao_excluir {
+.botao_excluir {
     background-color: #fb544b;
 }
 
@@ -82,4 +88,53 @@ td { /* linhas da tabela */
 
 .girar_imagem {
     transform: rotate(90deg) !important;
+}
+
+
+
+/* -------------------DAQUI PRA BAIXO É ESTILO DO DIALOG------------------- */
+
+#modal{
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 620px;
+    height: 280px;
+    border: none;
+    border-radius: 5px;
+    color: #7f7e84;
+}
+
+#dialogo-texto{
+    margin-top: 50px;
+}
+
+#dialogo-excluir{
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+#dialog-btns{
+    height: 110px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.botao_dialogo {
+    height: 40px;
+    width: 50px;
+    border: 1px solid #6864d9;
+    color: #6864d9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.botao_dialogo:hover{
+    cursor: pointer;
+}
+
+#btn-nao{
+    margin-right: 5px;
 }
