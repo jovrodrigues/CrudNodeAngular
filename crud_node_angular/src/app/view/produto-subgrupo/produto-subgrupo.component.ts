@@ -22,7 +22,6 @@ export class ProdutoSubgrupoComponent {
       (data) => {
         data.forEach(element => {
           this.objetosSubgrupo.push(element);
-          console.log(element);
         });
       });
   }
