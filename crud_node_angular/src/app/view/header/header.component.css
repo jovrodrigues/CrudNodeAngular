@@ -1,10 +1,6 @@
-
-
 #header_cabecalho_container {
   padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 #header_botao_menu {
@@ -12,7 +8,7 @@
   margin-left: 1rem;
 }
 
-#header_cabecalho_container, #header_container_produto, #header_cabecalho_container {
+#header_cabecalho_container, #header_container_produto {
   min-height: 8vh;
   align-items: center;
   justify-content: space-between;
@@ -24,6 +20,12 @@
 .header_icones {
   width: 3rem;
   height: 3rem;
+  padding: 0.5rem;
+}
+
+#header_logo {
+  width: 4rem;
+  height: 4rem;
   padding: 0.5rem;
 }
 
@@ -66,6 +68,18 @@
   margin-right: 0.5rem;
 }
 
+#header_produto_container {
+  background-color: #4d5fdb;
+  min-height: 8vh;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+
+}
+
 #header_user_container:hover {
   border-radius: 10px;
   padding: 0.5rem;
@@ -77,4 +91,59 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+
+#header_padding_1rem {
+  padding: 1rem;
+}
+
+.header_flex {
+  display: flex;
+}
+
+@media(min-width: 860px) {
+  #header_botao_menu a {
+    display: none;
+  }
+}
+
+@media (max-width: 860px){
+  .header_menu_nav_esquerda {
+    width: 35%;
+  }
+  #header_produto_container {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header_icones {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.1rem;
+  }
+
+  #header_nome_usuario {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 495px) {
+  #header_user_container {
+    margin-right: 1rem;
+    padding: 0;
+    margin-top: 4px;
+  }
+
+  .header_icones {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header_menu_nav_esquerda {
+    width: 50%;
+  }
 }
