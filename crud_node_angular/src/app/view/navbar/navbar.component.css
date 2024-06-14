@@ -1,115 +1,180 @@
+#header_cabecalho_container, #header_container_produto, #header_cabecalho_container {
+  min-height: 8vh;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+.header_icones {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+#header_logo {
+  width: 4rem;
+  height: 4rem;
+  padding: 0.5rem;
+}
+
+.header_icones:hover {
+  background-color: #4d5fdb;
+  border-radius: 10px;
+}
+
+#header_pipeline {
+  align-items: center;
+  display: flex;
+}
+
+.header_margin_right_1-5rem{
+  margin-right: 1.5rem;
+}
+
+#header_container_produto {
+  justify-content: center;
+  display: flex;
+  background-color: #4d5fdb;
+  position: absolute;
+  top: 0;
+  width: 16.66666667vw;
+}
+
+#header_cabecalho_container {
+  background-color: #6876f0;
+  width: 100vw;
+}
+
+#header_nome_usuario {
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+
+#header_container_direita {
+  padding: 0.5rem;
+  display: flex;
+  margin-right: 0.5rem;
+}
 
 #header_produto_container {
-    background-color: #4d5fdb;
-    min-height: 8vh;
-    width: 20vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-    top: 0;
-    position: absolute;
-  }
+  background-color: #4d5fdb;
+  min-height: 8vh;
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
 
-  #header_logo {
-    width: 4rem;
-    height: 4rem;
-    padding: 0.5rem;
-  }
+}
+
+#header_user_container:hover {
+  border-radius: 10px;
+  padding: 0.5rem;
+  background-color: #4d5fdb;
+}
+
+#header_container_icones_direita {
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
 .header_menu_nav_esquerda {
-    color: gray;
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    background-color: white;
-    height: 100%;
-    
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  min-width: 20vw;
+  min-height: 92vh;
+  background-color: white;
+}
+.header_itens_nav_container div {
+  padding: 1rem;
+}
+
+.header_itens_nav_container {
+  border-bottom: 1px solid lightgray;
+}
+
+.header_menu_nav_esquerda a{
+  text-decoration: none;
+  color: #575656;
+}
+
+.header_menu_nav_esquerda span {
+  color: rgb(145, 143, 143);
+}
+
+#header_simple_screens_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header_nav_span {
+  color: lightgray;
+}
+
+.header_nav_icones {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#header_padding_1rem {
+  padding: 1rem;
+}
+
+.header_flex {
+  display: flex;
+}
+
+@media(min-width: 860px) {
+  #header_botao_menu a {
+    display: none;
   }
-  
-  .header_itens_nav_container div {
-    padding: 1rem;
+  .collapse {
+    display: block;
   }
-  
-  .header_itens_nav_container {
-    border-bottom: 1px solid lightgray;
+}
+
+@media (max-width: 860px){
+  .header_menu_nav_esquerda {
+    width: 35vw;
   }
-  
-  .header_menu_nav_esquerda a{
-    text-decoration: none;
-    color: #575656;
+  #header_produto_container {
+    display: none;
   }
-  
-  .header_menu_nav_esquerda span {
-    color: rgb(145, 143, 143);
+}
+
+@media (max-width: 600px) {
+  .header_icones {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.1rem;
   }
-  
-  #header_simple_screens_container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+
+  #header_nome_usuario {
+    font-size: 1.2rem;
   }
-  
-  .header_nav_span {
-    color: lightgray;
+}
+
+@media (max-width: 495px) {
+  #header_user_container {
+    margin-right: 1rem;
+    padding: 0;
+    margin-top: 4px;
   }
-  
-  .header_nav_icones {
-    width: 1.5rem;
-    height: 1.5rem;
+
+  .header_icones {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
   }
-  
-  #header_padding_1rem {
-    padding: 1rem;
+
+  .header_menu_nav_esquerda {
+    width: 50vw;
   }
-  
-  .header_flex {
-    display: flex;
-  }
-  
-  @media(min-width: 860px) {
-    #header_botao_menu a {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 860px){
-    .header_menu_nav_esquerda {
-      width: 35%;
-    }
-    #header_produto_container {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .header_icones {
-      width: 2rem;
-      height: 2rem;
-      padding: 0.1rem;
-    }
-  
-    #header_nome_usuario {
-      font-size: 1.2rem;
-    }
-  }
-  
-  @media (max-width: 495px) {
-    #header_user_container {
-      margin-right: 1rem;
-      padding: 0;
-      margin-top: 4px;
-    }
-  
-    .header_icones {
-      width: 2rem;
-      height: 2rem;
-      padding: 0;
-      margin: 0;
-    }
-  
-    .header_menu_nav_esquerda {
-      width: 50%;
-    }
-  }
+}
