@@ -31,12 +31,18 @@ export class ApiService {
 
   getMarca(): Observable<Marca[]> { return this.http.get<Marca[]>(`${this.apiUrl}/produto_marca`); }
   postMarca(data : Marca): Observable<Marca> { return this.http.post<Marca>(`${this.apiUrl}/produto_marca`, data); }
-  
+  putMarca(id : any, data: any) { return this.http.put<any>(`${this.apiUrl}/produto_marca/${id}`, data); }
+  deleteMarca(id : any) { return this.http.delete(`${this.apiUrl}/produto_marca/${id}`); }
+
 
   getProdutos(): Observable<Produto[]> { return this.http.get<Produto[]>(`${this.apiUrl}/produto`); }
   postProdutos(data : Produto): Observable<Produto> { return this.http.post<Produto>(`${this.apiUrl}/produto`, data); }
+  putProdutos(id : any, data: any) { return this.http.put<any>(`${this.apiUrl}/produto/${id}`, data); }
+  deleteProdutos(id : any) { return this.http.delete(`${this.apiUrl}/produto/${id}`); }
 
 
   getUnidades(): Observable<Unidade[]> { return this.http.get<Unidade[]>(`${this.apiUrl}/produto_unidade`); }
   postUnidades(data : Unidade): Observable<Unidade> { return this.http.post<Unidade>(`${this.apiUrl}/produto_unidade`, data); }
+  putUnidades(id : any, data: any) { return this.http.put<any>(`${this.apiUrl}/produto_unidade/${id}`, data); }
+  deleteUnidades(id : any) { return this.http.delete(`${this.apiUrl}/produto_unidade/${id}`); }
 }

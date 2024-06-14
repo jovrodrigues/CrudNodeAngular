@@ -6,32 +6,42 @@ import { Grupo } from 'src/app/model/grupo';
   selector: 'app-produto-grupo',
   templateUrl: './produto-grupo.component.html',
   styleUrls: ['./produto-grupo.component.css']
-  
 })
 export class ProdutoGrupoComponent {
 
   dados: any;
-  objetosUnidade : Grupo[] = [];
+
+  objetosGrupo : Grupo[] = [];
  
   constructor(private apiService: ApiService) { }
 
   recarregarPagina() {   
     document.location.reload(); 
   }
- 
   ngOnInit():void { this.apiService.getGrupo().subscribe(
       (data) => {
         data.forEach(element => {
-          this.objetosUnidade.push(element);
+          this.objetosGrupo.push(element);
+          console.log(element);
         });
       });
   }
 
-  modalOpen(): void {
+  modalOpen(id : any): void {
     const modal = document.getElementById("modal") as HTMLDialogElement | null;
+
     if (modal) {
+      let botao_sim = document.getElementById("botao_sim");
+      botao_sim?.addEventListener('click', () => {
+        this.apiService.deleteGrupo(id).subscribe(error => {
+          console.error("Não foi possível excluir.", error);
+        });
+        this.modalClose();
+        this.recarregarPagina();
+      });
       modal.showModal();
     }
+
   }
   
   modalClose(): void {
@@ -40,4 +50,6 @@ export class ProdutoGrupoComponent {
       modal.close();
     }
   }
+
+
 }
