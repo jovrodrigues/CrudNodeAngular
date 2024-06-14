@@ -153,3 +153,62 @@ h2{
     color: #8e8c96;
     font-size: 16px;
 }
+
+@media(max-width: 1280px) {
+
+    .icones{
+        width: 50px;
+    }
+    
+    .items{
+        width: 290px;
+        height: 16px;
+        margin-left: 15px;
+    }
+
+    .produto{
+        margin-top: 10px;
+    }
+
+    #grafico{
+        width: 600px;
+        height: 250px;
+        margin-top: 50px;
+    }
+
+    #mensal-container{
+        height: 60vh;
+        width: 49.5vw;
+        border-radius: 5px;
+    }
+    
+    #vendas-container{
+        height: 60vh;
+        width: 24.5vw;
+        border-radius: 5px;
+    }
+
+    #vendas-container > div{
+        margin-top: 30px;
+    }
+
+    .produto >p, .produto > span{
+        font-size: 14px;
+    }
+
+    h4{
+        font-size: 12px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    h6, h5{
+        font-size: 12px;
+    }
+
+    .icone-seta{
+        width: 12px;
+    }
+  }
