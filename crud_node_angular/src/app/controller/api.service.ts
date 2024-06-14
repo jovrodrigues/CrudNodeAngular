@@ -18,7 +18,7 @@ export class ApiService {
 
 
   getGrupo(): Observable<Grupo[]> { return this.http.get<Grupo[]>(`${this.apiUrl}/produto_grupo`); }
-  postGrupo(data : Grupo): Observable<Grupo> { return this.http.post<Grupo>(`${this.apiUrl}/produto_grupo`, data); }
+  postGrupo(data : any): Observable<Grupo> { return this.http.post<Grupo>(`${this.apiUrl}/produto_grupo`, data); }
   putGrupo(id : any, data: any) { return this.http.put<any>(`${this.apiUrl}/produto_grupo/${id}`, data); }
   deleteGrupo(id : any) { return this.http.delete(`${this.apiUrl}/produto_grupo/${id}`); }
 
@@ -30,7 +30,7 @@ export class ApiService {
 
 
   getMarca(): Observable<Marca[]> { return this.http.get<Marca[]>(`${this.apiUrl}/produto_marca`); }
-  postMarca(data : Marca): Observable<Marca> { return this.http.post<Marca>(`${this.apiUrl}/produto_marca`, data); }
+  postMarca(data : any): Observable<Marca> { return this.http.post<Marca>(`${this.apiUrl}/produto_marca`, data); }
   putMarca(id : any, data: any) { return this.http.put<any>(`${this.apiUrl}/produto_marca/${id}`, data); }
   deleteMarca(id : any) { return this.http.delete(`${this.apiUrl}/produto_marca/${id}`); }
 
@@ -42,7 +42,7 @@ export class ApiService {
 
 
   getUnidades(): Observable<Unidade[]> { return this.http.get<Unidade[]>(`${this.apiUrl}/produto_unidade`); }
-  postUnidades(data : Unidade): Observable<Unidade> { return this.http.post<Unidade>(`${this.apiUrl}/produto_unidade`, data); }
+  postUnidades(data : any): Observable<Unidade> { return this.http.post<Unidade>(`${this.apiUrl}/produto_unidade`, data); }
   putUnidades(id : any, data: any) { return this.http.put<any>(`${this.apiUrl}/produto_unidade/${id}`, data); }
   deleteUnidades(id : any) { return this.http.delete(`${this.apiUrl}/produto_unidade/${id}`); }
 }

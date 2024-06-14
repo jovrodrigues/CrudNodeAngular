@@ -12,11 +12,6 @@ export class AppComponent {
 
   constructor(private apiService: ApiService) { } 
 
-  ngOnInit():void { this.apiService.getDados().subscribe(
-      (data) => {
-        this.dados = data; console.
-          log
-          (this.dados);
-      });
+  ngOnInit():void { this.apiService.getDados().subscribe();
   }
 }

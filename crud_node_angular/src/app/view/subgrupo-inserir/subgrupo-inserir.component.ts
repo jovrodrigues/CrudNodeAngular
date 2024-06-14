@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/controller/api.service';
-import { Subgrupo } from 'src/app/model/subgrupo';
 
 @Component({
   selector: 'app-subgrupo-inserir',
