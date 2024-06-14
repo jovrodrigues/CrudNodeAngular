@@ -86,3 +86,11 @@ p{
   background-color: #3bb9f4;
 }
 
+@media (max-width: 860px) {
+  #sla{
+    width: 55vw;
+  }
+  main {
+    width: 65vw;
+  }
+}
